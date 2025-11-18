@@ -1,0 +1,30 @@
+.dockContainer {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 12px 18px;
+    border-radius: 20px;
+    gap: 20px;
+    z-index: 999;
+}
+
+.dockItem {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.15s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        pointer-events: none;
+    }
+}

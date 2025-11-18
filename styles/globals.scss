@@ -1,0 +1,91 @@
+:root {
+    --background: #2a2a2a;
+    --foreground: #ffffff;
+    --primary-purple-button: #adadfb;
+    --white: #ffffff;
+    --black: #000000;
+    --black-40: rgba(255, 255, 255, 0.4);
+    --light-black-40: rgba(0, 0, 0, 0.4);
+    --background-dark: rgba(42, 42, 42, 1);
+    --black-20: rgba(255, 255, 255, 0.2);
+    --light-black-20: rgba(0, 0, 0, 0.2);
+    --primary-Indigo: rgba(173, 173, 251, 1);
+    --font-geist-sans: "geist";
+    --font-geist-mono: "geist-mono";
+    --main-background-dark: #333333;
+    --main-background-light: #f9f9fa;
+    --font-geist: "geist", sans-serif;
+    --font-inter: "inter", sans-serif;
+    --toastify-color-success: #2fac02;
+    --toastify-color-error: #ce1a00;
+    --toastify-font-family: "Inter";
+    --toastify-toast-bd-radius: 15px;
+    --toastify-toast-min-height: 55px;
+    --toastify-toast-padding: 15px 20px;
+    --toastify-toast-top: 6px;
+    --surface-primary: #151515;
+    --surface-secondary: #1d1d1d;
+    --surface-tertiary: #252525;
+    --border-color: rgba(255, 255, 255, 0.12);
+    --input-background: #2e2e2e;
+    --input-border: rgba(255, 255, 255, 0.1);
+    --muted-text: rgba(255, 255, 255, 0.55);
+    --gray: #bfbfbf;
+    --light-gray: rgba(255, 255, 255, 0.08);
+    --on-primary: #ffffff;
+    --border-dark: rgba(255, 255, 255, 0.18);
+    color-scheme: dark;
+}
+
+/* Light theme variables */
+[data-theme="light"] {
+    --background: #f4f5f7;
+    --foreground: #111111;
+    --background-dark: #ffffff;
+    --main-background-dark: #ffffff;
+    --black-40: rgba(0, 0, 0, 0.4);
+    --black-20: rgba(0, 0, 0, 0.2);
+    --surface-primary: #ffffff;
+    --surface-secondary: #f3f4f6;
+    --surface-tertiary: #e8eaed;
+    --border-color: rgba(17, 24, 28, 0.12);
+    --input-background: #ffffff;
+    --input-border: rgba(17, 24, 28, 0.14);
+    --muted-text: #646a73;
+    --gray: #4a4f55;
+    --light-gray: rgba(17, 24, 28, 0.08);
+    --on-primary: #ffffff;
+    --border-dark: rgba(17, 24, 28, 0.16);
+    color-scheme: light;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+}
