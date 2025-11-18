@@ -1,0 +1,15 @@
+.mainWrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    width: 50%;
+    margin: 0 auto;
+
+    .title {
+        font-family: var(--font-geist-mono);
+        font-size: 48px;
+        font-weight: 600;
+        color: var(--text-color);
+    }
+}
