@@ -7,9 +7,16 @@
     margin: 0 auto;
 
     .title {
-        font-family: var(--font-geist-mono);
+        font-family: var(--font-helvetica-neue);
         font-size: 48px;
-        font-weight: 600;
+        letter-spacing: -2px;
+        color: var(--text-color);
+    }
+
+    .aboutMe {
+        font-family: var(--font-sf-mono-regular);
+        font-size: 18px;
+        margin-top: 40px;
         color: var(--text-color);
     }
 }
