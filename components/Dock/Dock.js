@@ -1,11 +1,11 @@
-import { Bell, Home } from "lucide-react";
+import { Github, Home } from "lucide-react";
 import styles from "./Dock.module.scss";
 import { cloneElement, useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 const defaultItems = [
     { id: 'home', icon: <Home />, label: 'Home', href: "/" },
-    { id: 'notifications', icon: <Bell />, label: 'Notifications', href: "#" },
+    { id: 'github', icon: <Github />, label: 'Github', href: "https://github.com/kuldeep-jadeja/", target: "_blank" },
 ];
 
 export default function Dock({
@@ -40,10 +40,14 @@ export default function Dock({
         }
     }, [activeIndex, ready, items]);
 
-    const handleClick = (idx, extra) => {
-        setActiveIndex(idx);
-        onTabChange && onTabChange(idx);
-        extra && extra();
+    const handleClick = (idx, item, extra) => {
+        if (item.target === "_blank") {
+            extra && extra();
+        } else {
+            setActiveIndex(idx);
+            onTabChange && onTabChange(idx);
+            extra && extra();
+        }
     };
 
     return (
@@ -54,8 +58,10 @@ export default function Dock({
                     href={item.href || '#'}
                     ref={(el) => (itemRefs.current[index] = el)}
                     className={styles.navItem}
-                    onClick={() => handleClick(index, item.onClick)}
+                    onClick={() => handleClick(index, item, item.onClick)}
                     aria-label={item.label}
+                    target={item.target}
+                    rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                 >
                     {cloneElement(item.icon, {
                         className: `${styles.icon} ${activeIndex === index ? styles.iconActive : styles.iconInactive}${item.icon.props.className ? ` ${item.icon.props.className}` : ''}${iconClassName ? ` ${iconClassName}` : ''}`
